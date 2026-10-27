@@ -117,10 +117,7 @@ export function SearchDialog(): JSX.Element | null {
 		const normalizedQuery = normalizeSearchValue(query);
 		if (!normalizedQuery) return SEARCHABLE_ITEMS.slice(0, 12);
 
-		return SEARCHABLE_ITEMS.filter((result) => result.searchText.includes(normalizedQuery)).slice(
-			0,
-			12,
-		);
+		return SEARCHABLE_ITEMS.filter((result) => result.searchText.includes(normalizedQuery));
 	}, [query]);
 
 	function handleClose(): void {
